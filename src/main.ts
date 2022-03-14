@@ -27,7 +27,7 @@ function parseFlake8Output(output: string): Annotation[] {
   // Group 3: column number
   // Group 4: error code
   // Group 5: error description
-  let regex = new RegExp(/^(.*?):(\d+):(\d+): (\w\d+) ([\s|\w]*)/);
+  let regex = new RegExp(/^(.*?):(\d+):(\d+): (\w+\d+) ([\s|\w]*)/);
   let errors = output.split('\n');
   let annotations: Annotation[] = [];
   for (let i = 0; i < errors.length; i++) {
